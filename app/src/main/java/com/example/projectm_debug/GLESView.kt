@@ -11,8 +11,6 @@ import kotlin.math.sqrt
 
 
 class GLESView(context: Context, attrs: AttributeSet?) : GLSurfaceView(context, attrs) {
-    private var m_FingersDown = 0
-
     init {
         setEGLContextClientVersion(3)
         val m_Renderer = MyRenderer()
