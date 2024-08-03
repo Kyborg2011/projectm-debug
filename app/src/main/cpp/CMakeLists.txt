@@ -11,7 +11,7 @@ add_library( projectM-4
 
 set_target_properties( projectM-4
         PROPERTIES IMPORTED_LOCATION
-        ${lib_src_DIR}/libprojectM/lib/${ANDROID_ABI}/libprojectM-4d.so )
+        ${lib_src_DIR}/libprojectM/lib/${ANDROID_ABI}/libprojectM-4.so )
 
 include_directories( ${lib_src_DIR}/libprojectM/include
         ${CMAKE_CURRENT_SOURCE_DIR} )

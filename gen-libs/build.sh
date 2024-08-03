@@ -27,17 +27,17 @@ function build_projectm {
         -DANDROID_ABI=${ABI} \
         -DANDROID_PLATFORM=android-${MIN_SDK_VERSION} \
         -DANDROID_TOOLCHAIN=clang \
-        -DCMAKE_BUILD_TYPE=Debug \
+        -DCMAKE_BUILD_TYPE=Release \
         -DBUILD_TESTING=NO \
         -DENABLE_SDL_UI=OFF \
         -DENABLE_PLAYLIST=OFF \
         -DENABLE_SYSTEM_PROJECTM_EVAL=OFF \
         -DENABLE_GLES=ON
 
-    cmake --build ${ABI} --config "Debug" --parallel
+    cmake --build ${ABI} --config "Release" --parallel
 
     mkdir -p ${BUILD_OUTPUT_PATH}/libprojectM/lib/${ABI}
-    cp ${ABI}/src/libprojectM/libprojectM-4d.so ${BUILD_OUTPUT_PATH}/libprojectM/lib/${ABI}/
+    cp ${ABI}/src/libprojectM/libprojectM-4.so ${BUILD_OUTPUT_PATH}/libprojectM/lib/${ABI}/
 }
 
 build_projectm arm64-v8a
